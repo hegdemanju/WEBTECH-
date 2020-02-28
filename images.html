@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>Slide Shows</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel = "stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="css2.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.mySlides {display:none;}
+.fullone{
+  display: flex;
+  
+}
+</style>
+<body>
+        <div class="header">
+                <img src="logo2.png" class="logo" style="width: 20% ; max-width: 210px; margin-top:0px;">
+        </div>
+        <nav>
+            
+                <ul>
+                    <li><a href="index.html" class="material-icons">home</a></li>
+                    <li><a href="map.html" class="material-icons">navigation</a></li>
+                    <li><a href="images.html" class="material-icons">photo_camera</a></li>
+                    <li><a href="Contact.html" class="material-icons">call</a></li>
+                </ul>
+            </nav>
+            <div class="w3-container">
+                <div class="w3-content w3-section" style="max-width:800px">
+                    <img class="mySlides w3-animate-top" src="ss1.JPG" style="width:100%">
+                    <img class="mySlides w3-animate-top" src="ss2.JPG" style="width:100%">
+                    <img class="mySlides w3-animate-top" src="ss5.JPG" style="width:100%">
+                    <img class="mySlides w3-animate-top" src="ss4.JPG" style="width:100%">
+                    
+                  
+                </div>
+                  <div class="fullone">
+                  <div class="my web" >
+                    <iframe class="mySlides_1 " width="210px" height="300px"
+                      src="https://www.instagram.com/p/B4cjgmNjV6l/embed"
+                      allowfullscreen></iframe>
+                  
+                   </div>
+                    <div class="my web" >
+                       <iframe class="mySlides_1 " width="210px" height="300px"
+                         src="https://www.instagram.com/p/BzXWljVjEzp/embed" allowfullscreen></iframe>
+                    
+                     </div>
+                     <div class="my web" >
+                         <iframe class="mySlides_1" width="210px" height="300px"
+                           src="https://www.instagram.com/p/BxjgBLujxH-/embed" allowfullscreen></iframe>
+                      
+                      </div>  
+                       <div class="my web">
+                         <iframe class="mySlides_1" width="210px" height="300px"
+                           src="https://www.instagram.com/p/BwWUSOTjXv8/embed" allowfullscreen></iframe>
+
+                       </div>
+                        <div class="my web">
+                          <iframe class="mySlides_1" width="210px" height="300px"
+                            src="https://www.instagram.com/p/BsV6eZ-ltg6/embed" allowfullscreen></iframe>
+
+                        </div>
+                         <div class="my web">
+                           <iframe class="mySlides_1" width="210px" height="300px"
+                             src="https://www.instagram.com/p/Bv4SnV0DcbG/embed" allowfullscreen></iframe>
+
+                         </div>
+                          <div class="my web">
+                            <iframe class="mySlides_1" width="210px" height="300px"
+                              src="https://www.instagram.com/p/B0CxVQdjy7X/embed" allowfullscreen></iframe>
+
+                          </div>
+                          
+                 </div>
+                </div>
+
+                  <div class="footer">
+                    <a href="https://www.instagram.com/birdie_badminton/" class="fa fa-instagram""></a>
+            <p>Copyright 2019</p>
+        </div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+</script>
+
+</body>
+</html>

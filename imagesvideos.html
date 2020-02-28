@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css2.css">
+
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+html{ min-height:100%; overflow-y:scroll;  background:rgb(255, 255, 255); }
+body{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; padding:0; height:800px}
+ 
+
+a{ text-decoration:none; }
+
+#wrap{ overflow:hidden; padding:3%; }
+#pbOverlay.show ~ #wrap{ -webkit-filter:blur(2px) grayscale(.4); }
+		
+#gallery{ padding:20px; }
+	#gallery li{ list-style:none; perspective:100px; -webkit-perspective:100px; margin:1px; float:right; position:relative; transition:.1s; -webkit-transition:0.1s; }
+		#gallery li.video::before{ content:'\25BA'; color:#FFF; font-size:20px; height:20px; width:20px; line-height:0.9; position:absolute; bottom:3px; left:4px; z-index:1; background:rgba(0,0,0,0.4); box-shadow:0 0 0 3px rgba(0,0,0,0.4); border-radius:0 3px 0 0; pointer-events:none; opacity:0; transition:.5s 0.2s; }
+		#gallery li.loaded.video::before{ opacity:1; }
+		#gallery a{ display:block; width:75px; height:68px; vertical-align:bottom; overflow:hidden; background:rgba(0,0,0,0.1);
+					transition:.4s ease-out; -webkit-transition:0.4s ease-out; -webkit-transform:rotateX(90deg) translate(-50px,-50%); transform:rotateX(90deg) translate(-50px,-50%); }
+		#gallery a:active, #gallery a:focus{ outline:none; }
+		#gallery a img{ min-height:100%; width:100%; transition:.3s ease-out; -webkit-transition:0.3s ease-out; }
+		#gallery .loaded a{ -webkit-transform:rotateX(0deg) translate(0,0); transform:rotateX(0deg) translate(0,0); }
+			#gallery li.loaded:hover{ z-index:2; transform:scale(1.5); -webkit-transform:scale(1.5); }
+			#gallery li.loaded a:hover{ box-shadow:0 0 0 2px #FFF, 0 0 20px 5px #000; transition:.1s; -webkit-transition:0.1s; }
+			#gallery li.loaded:hover img{ transform:scale(1.2); -webkit-transform:scale(1.2); }
+			#gallery li.loaded.video:hover::before{ opacity:0; }
+</style>
+<body>
+
+		<div class="header">
+				<img src="logo2.png">
+		</div>
+		<nav>
+			
+				<ul>
+					<li><a href="index.html" class="material-icons">home</a></li>
+					<li><a href="#" class="material-icons">fitness_center</a></li>
+					<li><a href="map.html" class="material-icons">navigation</a></li>
+					<li><a href="#" class="material-icons">assignment</a></li>
+					<li><a href="Contact.html" class="material-icons">call</a></li>
+				</ul>
+			</nav>
+			
+<div class="w3-content w3-display-container" style="width:500px;margin-top : 50px;" >
+  <img class="mySlides" src="bg.jpg" style="width:500px;height:300px">
+  <img class="mySlides" src="bg1.jpg" style="width:500px;height:300px">
+  <img class="mySlides" src="bg2.jpg" style="width:500px;height:300px">
+  <iframe class="mySlides" width="500px" height="300px" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" allowfullscreen></iframe>
+  <iframe class="mySlides" width="500px" height="300px" src="https://www.youtube.com/embed/cPJUBQd-PNM?control=0" allowfullscreen></iframe>
+
+  
+  
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+  </div>
+</div>
+
+<ul id='gallery'>
+
+</ul>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+
+  
+}
+
+
+
+!(function(){
+    'use strict';
+
+	var numOfImages = window.location.search ? parseInt(window.location.search.match(/\d+$/)[0]) : 70,
+		gallery = $('#gallery'),
+		videos = [
+			{
+				title: "Victoria's Secret",
+				url: "https://player.vimeo.com/video/8974462?byline=0&portrait=0",
+				thumb: "https://b.vimeocdn.com/ts/432/699/43269900_100.jpg"
+			},
+			{
+				title: "PEOPLE ARE AWESOME 2013 FULL HD ",
+				url: "https://www.youtube.com/embed/W3OQgh_h4U4",
+				thumb: "https://img.youtube.com/vi/W3OQgh_h4U4/0.jpg"
+			},
+			{
+				title: "Biting Elbows - 'Bad Motherfucker' Official Music Video",
+				url: "https://player.vimeo.com/video/62092214?byline=0&portrait=0",
+				thumb: "https://b.vimeocdn.com/ts/431/797/431797120_100.jpg"
+			}
+		];
+		
+    // Get some photos from Flickr for the demo
+    $.ajax({
+        url: 'https://api.flickr.com/services/rest/',
+        data: {
+            format: 'json',
+            method: 'flickr.interestingness.getList',
+			per_page : numOfImages,
+            api_key: 'b51d3a7c3988ba6052e25cb152aecba2' // this is my own API key, please use yours
+        },
+	    dataType: 'jsonp',
+        jsonp: 'jsoncallback'
+    })
+	.done(function (data){
+        var loadedIndex = 1, isVideo;
+		
+		// add the videos to the collection
+		data.photos.photo = data.photos.photo.concat(videos);
+		
+        $.each( data.photos.photo, function(index, photo){
+			isVideo = photo.thumb ? true : false;
+			// http://www.flickr.com/services/api/misc.urls.html
+            var url = 'http://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret,
+				img = document.createElement('img');
+			
+			// lazy show the photos one by one
+			img.onload = function(e){
+				img.onload = null;
+				var link = document.createElement('a'),
+				li = document.createElement('li')
+				link.href = this.largeUrl;
+
+				link.appendChild(this);
+				if( this.isVideo ){
+					link.rel = 'video';
+					li.className = 'video'
+				}
+				li.appendChild(link);
+				gallery[0].appendChild(li);
+			
+				setTimeout( function(){ 
+					$(li).addClass('loaded');
+				}, 25*loadedIndex++);
+			};
+			
+			img['largeUrl'] = isVideo ? photo.url : url + '_b.jpg';
+			img['isVideo'] = isVideo;
+			img.src = isVideo ? photo.thumb : url + '_t.jpg';
+			img.title = photo.title;
+        });
+
+		// finally, initialize photobox on all retrieved images
+		$('#gallery').photobox('a', { thumbs:true }, callback);
+		// using setTimeout to make sure all images were in the DOM, before the history.load() function is looking them up to match the url hash
+		setTimeout(window._photobox.history.load, 1000);
+		function callback(){
+			console.log('callback for loaded content:', this);
+		};
+    });
+})();
+</script>
+
+</body>
+</html> 

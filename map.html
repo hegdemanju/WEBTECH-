@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Directions</title>
+        <link rel = "stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="css2.css"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src = "bd_js.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=<XXXX>&libraries=places,geometry&callback=myMap"></script>
+    </head>
+    <body>
+            <div class="header">
+                <img src="logo2.png" class="logo" style="width: 20% ; max-width: 210px; margin-top:0px;">
+            </div>
+            <nav>
+                
+                    <ul>
+                        <li><a href="index.html" class="material-icons">home</a></li>
+                        <li><a href="map.html" class="material-icons">navigation</a></li>
+                        <li><a href="images.html" class="material-icons">photo_camera</a></li>
+                        <li><a href="Contact.html" class="material-icons">call</a></li>
+
+                    </ul>
+                </nav>
+                
+            <h3>Directions</h3>
+
+            <div id="map"></div>
+
+              <div class="footer">
+                  <a href="https://www.instagram.com/birdie_badminton/" class="fa fa-instagram""></a>
+            <p>Copyright 2019</p>
+        </div>
+            <script>
+            
+            function myMap()
+            {
+            var myLatlng = new google.maps.LatLng(12.916404, 77.606547);
+            var mapOptions = {
+            zoom:15,
+            center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                title:"Birdie Badminton Academy",
+                animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+            }
+
+            </script>
+    </body>
+</html>

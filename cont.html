@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html><head>
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Oswald&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+body {
+  font-size: 24px;
+}
+body{
+    background-image: url("mjpg.jpg");
+    
+}
+
+
+   #nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color: #333;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+}
+
+    .nav {
+  float: left;
+}
+
+  .nav1 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+  .nav1:hover {
+  background-color: #111;
+}
+
+  .active {
+  background-color: #4CAF50;
+}
+ .header h1{
+    color: rgb(26, 118, 224);
+    size: 25px;
+    position: relative;
+    font-family: 'Oswald';
+}
+ .header img{
+     
+   
+    float:left;
+    margin-left: 400px;
+    width: 150px;
+    height: 100px;
+    background: #555;
+    
+
+}
+#submit_1{
+    width: 10em;  height: 2em;
+}
+#reset_1{
+    width: 10em;  height: 2em;
+}
+input:focus{
+    background-color: coral;
+}
+#submit_1:hover{
+    background-color: gray;
+}
+#reset_1:hover{
+  background-color:gray; 
+}
+input:hover{
+  background-color: burlywood;
+}
+#first_name{
+ box-shadow: 5px 10px 15px black ;
+}
+#last_name{
+ box-shadow: 5px 10px 15px black ;
+}
+#email_name{
+ box-shadow: 5px 10px 15px black ;
+}
+#phone_name{
+ box-shadow: 5px 10px 15px black ;
+}
+#text_name{
+ box-shadow: 5px 10px 25px black ;
+}
+#submit_1{
+ box-shadow: 5px 10px 15px black ;
+ background-color:orchid;
+}
+#reset_1{
+  box-shadow: 5px 10px 15px black ; 
+  background-color:orchid;
+}
+.form_1{
+  text-align: center;
+}
+#address_name{
+  box-shadow: 5px 10px 15px black ;
+}
+#city{
+  box-shadow: 5px 10px 15px black ;
+}
+#pincode{
+  box-shadow: 5px 10px 15px black ;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+    
+<div class="header">
+    <img src="nn.jpg">
+    <h1>Birdie Badminton Academy</h1>
+</div>
+
+
+<ul id="nav">
+  <li class="nav"><a class="active nav1" href="project_1.html">Home</a></li>
+  <li  class="nav"><a href="#PAGE1" class="nav1">PAGE1</a></li>
+  <li  class="nav"><a href="Contact.html" class="nav1">Contact</a></li>
+  <li class="nav"><a href="#PAGE2" class="nav1">PAGE2</a></li>
+  <li class="nav"><a href="maps.html" class="nav1">MAPS</a></li>
+
+</ul>
+<form action="submit.php">
+  <div class="form_1">
+        First name:<br>
+        <input type="text" name="firstname" id="first_name" placeholder="ENTER FIRST NAME"size="35" >
+        <br>
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" id="last_name" placeholder="ENTER LAST NAME" size="35">
+        <br>
+        <br>
+        Email Id:<br>
+        <input type="email" name="email"id="email_name" placeholder="ENTER EMAIL ID" size="35">
+        <br>
+        <br>
+        Phone Number:<br>
+        <input type="number" name="phone number" id="phone_name" placeholder="ENTER PH NO " size="55">
+        <br>
+        <br>
+        
+        ADDRESS:<br>
+        <address>
+          <input type="text" id="address_name" placeholder="ENTER YOUR ADDRESS" size="35">
+        </address>
+        <br>
+        <br>
+        CITY:<br>
+        <input type="text" id="city" placeholder="ENTER YOUR CITY" size="35">
+        <br>
+        <br>
+        PINCODE:<br>
+        <input type="number" id="pincode" placeholder="PINCODE" size="35" maxlength="6">
+        <br>
+        <br>
+        QUERIES:<br>
+        <textarea name="text_area" id="text_name" rows="20" cols="60">
+         
+        </textarea>
+        <br>
+        <br>
+        
+        <input type="submit"  value="submit" id="submit_1" size="35">
+        <input type="reset"   value="reset" id="reset_1" size="35">
+        
+  </div>
+      </form>
+
+</body></html>

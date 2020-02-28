@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="register.css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css2.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+    <body>
+
+            <div class="header">
+                  <img src="logo2.png" class="logo" style="width: 20% ; max-width: 210px; margin-top:0px;">
+            </div>
+            <nav>
+                
+                    <ul>
+                            <li><a href="index.html" class="material-icons">home</a></li>
+                            <li><a href="map.html" class="material-icons">navigation</a></li>
+                            <li><a href="images.html" class="material-icons">photo_camera</a></li>
+                            <li><a href="Contact.html" class="material-icons">call</a></li>
+                    </ul>
+            </nav>
+
+        <form method="POST" action ="register.php" >
+            <div class="row">
+                   
+                        <h1>SIGN UP</h1><p id="query" style="text-align:left;margin-left:380px;"><b>Query</b></p>
+                        <label for="firstname"><b>First Name&nbsp;</b></label>
+                        <input type="text" name="firstname" id="fn" required><br><br>
+                        
+                        <label for="lastname"><b>Last Name&nbsp;</b></label>
+                        <input type="text" name="lastname" id="ln" required><br><br>
+            
+                        <label for="email"><b>&nbsp;&nbsp;Email - ID&nbsp;&nbsp;</b></label>
+                        <input type="email" name="email"id="em" required><br><br>
+            
+                        <label for="phoneno"><b>&nbsp;&nbsp;Phone No&nbsp;</b></label>
+                        <input type="text" name="phoneno" maxlength="8" id="un" required><br><br>
+            
+                        <label for="address"><b>&nbsp;&nbsp;&nbsp;Address&nbsp;&nbsp;&nbsp; </b></label>
+                        <input type="text" name="address" id="ps" required><br><br>
+
+                        <label for="city"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</b></label>
+                        <input type="text" name="city" id="ps" required><br><br>
+
+                        <label for="pincode"><b>&nbsp;&nbsp;Pin-Code&nbsp;&nbsp;</b></label>
+                        <input type="text" name="pincode" id="ps" required><br><br>
+                        
+                        <textarea rows = 10 cols = 34 name="query"></textarea><br><br>
+                        <button name="create" value="Sign Up" id="btn" onclick=required()>Submit</button>
+                        
+            
+                        
+            </div>
+
+              <div class="footer">
+                  <a href="https://www.instagram.com/birdie_badminton/" class="fa fa-instagram""></a>
+            <p>Copyright 2019</p>
+        </div>
+                    
+        </form>
+                <script>
+                    btn.addEventListener('click',required,true); 
+                        function required(e)
+                        {   var valid= this.form.checkValidity();
+                            if(valid){
+                                alert("");
+                            }
+                            else{
+                                alert("Fill up all the details properly.");
+                            }
+                        }
+                </script>
+    </body>
+</html>
